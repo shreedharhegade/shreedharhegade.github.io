@@ -1,8 +1,9 @@
-#Jack's PORT 
+# JACK's PORT 
 This repository contains the source code for my personal portfolio website.
 
-[Click Here](https://shreedharhegade.github.io) to visit the website
+[Click Here](https://shreedharhegade.github.io) to visit the website.
 
+<br>
 
 ## Licenses
 
