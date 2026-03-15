@@ -101,11 +101,12 @@
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-ink antialiased selection:bg-primary selection:text-white">
 
-    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+    <div class="relative flex min-h-screen w-full flex-col">
         
         <!-- Navigation Bar -->
         <header class="sticky top-0 z-50 w-full border-b-4 border-ink bg-background-light px-6 md:px-20 py-4 flex items-center justify-between shadow-sm">
             <div class="flex items-center gap-3">
+                <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
                 <div class="comic-border bg-primary p-1 shadow-comic">
                      <img src="images/spider.png" 
                         alt="" 
@@ -113,10 +114,12 @@
                         aria-hidden="true">
                 </div>
                 <h1 class="text-2xl font-black italic tracking-tighter uppercase">Jack's Port.</h1>
+                </a>
             </div>
             
             <!-- Desktop Nav -->
             <nav class="hidden md:flex items-center gap-8" aria-label="Main Navigation">
+                <a class="text-sm font-bold uppercase hover:text-primary tracking-widest transition-colors" href="#About">About</a>
                 <a class="text-sm font-bold uppercase hover:text-primary tracking-widest transition-colors" href="#Powers">Powers</a>                
                 <a class="text-sm font-bold uppercase hover:text-primary tracking-widest transition-colors" href="#Adventures">Adventures</a>
                 <a class="text-sm font-bold uppercase hover:text-primary tracking-widest transition-colors" href="#Chronicles">Chronicles</a>
@@ -137,6 +140,7 @@
             <button id="close-menu-btn" class="absolute top-6 right-6 p-2 comic-border" aria-label="Close Menu">
                 <span class="material-symbols-outlined text-3xl">close</span>
             </button>
+            <a class="text-sm font-bold uppercase hover:text-primary tracking-widest transition-colors" href="#About">About</a>
             <a class="text-2xl font-black uppercase tracking-widest hover:text-primary mobile-link" href="#Powers">Powers</a>
             <a class="text-2xl font-black uppercase tracking-widest hover:text-primary mobile-link" href="#Adventures">Adventures</a>
             <a class="text-2xl font-black uppercase tracking-widest hover:text-primary mobile-link" href="#Chronicles">Chronicles</a>
@@ -169,16 +173,109 @@
                             HEY THERE! <br/>I'M <span class="text-primary italic" id="typingName"></span><span class="text-primary italic">|</span>
                         </h2>
                         <p class="text-lg font-medium leading-relaxed max-w-lg">
-                            I AM UNDERGRADE STUDENT WHO THINK CODES CAN SHAPE THE MORDERN WORLD. WELCOME TO MY CREATIVE UNIVERSE WHERE EVERY PIXEL TELLS A STORY!
+                            Welcome to the mission Log! Feel free to explore my world of coding and creativity. Let's dive into the multiverse of possibilities together!
                         </p>
                     </div>
                     <div class="flex flex-wrap gap-4">
-                        <a href="#Adventures" class="bg-ink text-white px-8 py-4 comic-border shadow-comic-primary font-black uppercase tracking-widest hover:scale-105 transition-transform inline-block">
-                            View Adventures
+                        <a href="#About" class="bg-ink text-white px-8 py-4 comic-border shadow-comic-primary font-black uppercase tracking-widest hover:scale-105 transition-transform inline-block">
+                            View Identity
                         </a>
                         <div class="flex items-center gap-2 font-bold uppercase text-sm tracking-widest">
                             <span class="material-symbols-outlined text-primary animate-bounce">arrow_downward</span>
                             Scroll to explore
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Me Section (The Dossier) -->
+            <section id="About" class="scroll-mt-28 relative">
+                <!-- Background Decoration -->
+                <div class="absolute inset-0 halftone opacity-20 -z-10"></div>
+                
+                <div class="max-w-5xl mx-auto">
+                    <div class="bg-white comic-border shadow-comic p-1 md:p-2 -rotate-1">
+                        <div class="comic-border border-dashed p-6 md:p-10 bg-[#fffdf5]">
+                            <div class="flex flex-col md:flex-row gap-10">
+                                
+                                <!-- Character Specs Column -->
+                                <div class="md:w-1/3 space-y-6">
+                                    <div class="relative">
+                                        <div class="bg-ink text-white px-4 py-1 font-black uppercase italic text-sm absolute -top-3 -left-2 rotate-[-5deg]">
+                                            Personnel File
+                                        </div>
+                                        <div class="comic-border p-4 pt-8 bg-white">
+                                            <ul class="space-y-3">
+                                                <li class="border-b-2 border-ink/10 pb-1">
+                                                    <span class="block text-[10px] font-black uppercase text-primary">Real Name</span>
+                                                    <span class="font-black text-xl uppercase italic">Shreedhar Hegade</span>
+                                                </li>
+                                                <li class="border-b-2 border-ink/10 pb-1">
+                                                    <span class="block text-[10px] font-black uppercase text-primary">Class</span>
+                                                    <span class="font-bold uppercase">Undergraduate Coder</span>
+                                                </li>
+                                                <li class="border-b-2 border-ink/10 pb-1">
+                                                    <span class="block text-[10px] font-black uppercase text-primary">Location</span>
+                                                    <span class="font-bold uppercase">Mysore, IN</span>
+                                                </li>
+                                                <li>
+                                                    <span class="block text-[10px] font-black uppercase text-primary">Base of Operations</span>
+                                                    <span class="font-bold uppercase">Earth-616 (Terminal)</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Signature/Stamp -->
+                                    <div class="flex justify-center md:justify-start">
+                                        <div class="border-4 border-accent-red text-accent-red px-4 py-2 font-black uppercase text-2xl opacity-70 -rotate-12 rounded-sm inline-block">
+                                            Classified
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Narrative Column -->
+                                <div class="md:w-2/3">
+                                    <h2 class="text-4xl font-black uppercase italic tracking-tighter mb-6 underline decoration-accent-yellow decoration-8 underline-offset-4">
+                                        The Identity Revealed
+                                    </h2>
+                                    <div class="space-y-4 font-medium text-lg leading-relaxed">
+                                        <p>
+                                            Every hero has an origin story. Mine didn't start with a radioactive spider, but with a <span class="bg-accent-yellow/30 px-1">glowing terminal screen</span> and a curiosity to build things that matter.
+                                        </p>
+                                        <p>
+                                            As an undergraduate student, I spend my days navigating the complex multiverses of 
+                                            <span class="font-bold italic">Data Structures</span>, <span class="font-bold italic">Algorithms</span>, and <span class="font-bold italic">Modern Web Architecture</span>. I believe that code is the closest thing we have to magic in the modern world.
+                                        </p>
+                                        <p class="text-ink/70 italic text-base">
+                                            "My mission is simple: To solve real-world problems with elegant, efficient code—one line at a time."
+                                        </p>
+                                    </div>
+
+                                    <!-- Character Stats/Meters -->
+                                    <div class="mt-8 grid grid-cols-2 gap-4">
+                                        <div class="space-y-1">
+                                            <div class="flex justify-between text-[10px] font-black uppercase">
+                                                <span>Creativity</span>
+                                                <span>95%</span>
+                                            </div>
+                                            <div class="h-3 comic-border bg-gray-200 overflow-hidden">
+                                                <div class="h-full bg-primary" style="width: 95%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <div class="flex justify-between text-[10px] font-black uppercase">
+                                                <span>Logic</span>
+                                                <span>90%</span>
+                                            </div>
+                                            <div class="h-3 comic-border bg-gray-200 overflow-hidden">
+                                                <div class="h-full bg-accent-red" style="width: 90%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -204,10 +301,10 @@
                     <!-- Power 2 -->
                     <article class="comic-border p-6 bg-white shadow-comic hover:-translate-y-2 transition-transform group h-full">
                         <div class="size-14 bg-accent-red comic-border flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform">
-                            <span class="material-symbols-outlined text-white text-3xl">terminal</span>
+                            <span class="material-symbols-outlined text-white text-3xl">web</span>
                         </div>
-                        <h3 class="text-xl font-black uppercase mb-1">TERMINALS</h3>
-                        <p class="text-xs font-bold text-accent-red uppercase tracking-widest">LINUX</p>
+                        <h3 class="text-xl font-black uppercase mb-1">Web</h3>
+                        <p class="text-xs font-bold text-accent-red uppercase tracking-widest">next js, supabase</p>
                     </article>
                     
                     <!-- Power 3 -->
@@ -215,8 +312,8 @@
                         <div class="size-14 bg-accent-yellow comic-border flex items-center justify-center mb-4 group-hover:rotate-12 transition-transform">
                             <span class="material-symbols-outlined text-ink text-3xl">auto_fix_high</span>
                         </div>
-                        <h3 class="text-xl font-black uppercase mb-1">Motion</h3>   
-                        <p class="text-xs font-bold text-ink/60 uppercase tracking-widest">Storytelling</p>
+                        <h3 class="text-xl font-black uppercase mb-1">Intrest</h3>   
+                        <p class="text-xs font-bold text-accent-yellow uppercase tracking-widest">Storytelling</p>
                     </article>
                     
                     <!-- Power 4 -->
@@ -244,6 +341,7 @@
                     <!-- Project 1 -->
                     <article class="group cursor-pointer">
                         <div class="relative comic-border bg-white p-3 shadow-comic group-hover:shadow-comic-primary transition-all">
+                            <a href="https://github.com/shreedharhegade/parkit" target="_blank" rel="noopener noreferrer" class="absolute inset-0 z-20" aria-label="View Park it on GitHub"></a>
                             <div class="aspect-video comic-border overflow-hidden">
                                 <img 
                                     src="images/parkit.png" 
@@ -270,6 +368,7 @@
                     <!-- Project 2 -->
                     <article class="group cursor-pointer">
                         <div class="relative comic-border bg-white p-3 shadow-comic group-hover:shadow-comic-primary transition-all">
+                            <a href="https://github.com/shreedharhegade/threadstore" target="_blank" rel="noopener noreferrer" class="absolute inset-0 z-20" aria-label="View Threadstore on GitHub"></a>
                             <div class="aspect-video comic-border overflow-hidden">
                                 <img 
                                     src="images/threadstore.png" 
@@ -307,6 +406,7 @@
                     <!-- Blog Post 1 -->
                     <article class="flex flex-col comic-border bg-white shadow-comic group h-full">
                         <div class="h-48 overflow-hidden border-b-4 border-ink bg-slate-100 relative">
+                            <a href="blogs/blog-post-1.html" class="absolute inset-0 z-20" aria-label="Read Blog Post: Humanity's Return to the Moon"></a>
                              <!-- Placeholder pattern for blog image -->
                               <img 
                                     src="images/artemis_poster.png" 
@@ -397,7 +497,7 @@
                                     </svg>
                                 </a>
 
-                                <a href="https://discord.com/users/shreedharhegade" target="_blank" aria-label="Discord" class="size-10 comic-border bg-ink text-white flex items-center justify-center hover:bg-primary cursor-pointer transition-colors">
+                                <a href="https://discordapp.com/users/1311735028329480253" target="_blank" aria-label="Discord" class="size-10 comic-border bg-ink text-white flex items-center justify-center hover:bg-primary cursor-pointer transition-colors">
                                     <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
                                     <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0956 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0956 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"/>
                                     </svg>
