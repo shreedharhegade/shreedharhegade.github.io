@@ -173,16 +173,18 @@
                             <time class="text-xs font-bold text-ink/60 uppercase" datetime="2024-03-15">February 5, 2026</time>
                         </div>
                     </div>
-                    <!--
+                    
                     <div class="flex gap-2">
-                        <button class="size-8 flex items-center justify-center hover:text-primary transition-colors" aria-label="Share on X">
-                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        <button onclick="shareOnX()" class="size-8 flex items-center justify-center hover:text-primary transition-colors" aria-label="Share on X">
+                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
                         </button>
-                        <button class="size-8 flex items-center justify-center hover:text-primary transition-colors" aria-label="Copy Link">
+                        <button id="shareBtn" onclick="copyPageUrl()" class="size-8 flex items-center justify-center hover:text-primary transition-colors" aria-label="Copy Link">
                             <span class="material-symbols-outlined text-lg">link</span>
                         </button>
                     </div>
-                -->
+                
                 </div>
             </header>
 
@@ -317,8 +319,43 @@
         </footer>
     </div>
 
-    <!-- Mobile Menu Logic -->
+    <!-- Mobile Menu & Shareing Logic -->
+
     <script>
+        function shareOnX() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent("Check out this amazing article by @alsojackspider on Artemis II and humanity's return to the Moon! #ArtemisII #NASA");
+            const xShareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+            window.open(xShareUrl, '_blank');
+        }
+        function copyPageUrl() {
+            // Grab the current page's URL
+            const currentUrl = window.location.href; 
+
+            // Use the modern Clipboard API to write the text
+            navigator.clipboard.writeText(currentUrl).then(() => {
+      
+                // Provide visual feedback (change text to "Copied!")
+                const button = document.getElementById('shareBtn');
+                const iconSpan = button.querySelector('.material-symbols-outlined');
+                if (iconSpan) {
+                    iconSpan.innerText = 'check';
+                    button.classList.add('text-green-500');
+
+                // Reset the button text back to normal after 2 seconds
+                setTimeout(() => {
+                    iconSpan.innerText = 'link';
+                    button.classList.remove('text-green-500');
+                }, 2000);
+            }
+
+            }).catch(err => {
+                // Handle errors (e.g., if the user denies clipboard permission)
+                console.error('Failed to copy the link: ', err);
+                alert('Failed to copy link. Please copy the URL from your browser.');
+            });
+        }
+
         const mobileBtn = document.getElementById('mobile-menu-btn');
         const closeBtn = document.getElementById('close-menu-btn');
         const menu = document.getElementById('mobile-menu');
